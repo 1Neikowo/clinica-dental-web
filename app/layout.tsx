@@ -13,12 +13,12 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Clínica Dental Pro | Dentista en Temuco, Chile",
-  description: "Clínica dental de especialidades en Temuco. Ortodoncia, implantes, estética dental y urgencias 24/7. Agenda tu evaluación gratuita hoy.",
-  keywords: "dentista temuco, clínica dental temuco, ortodoncia temuco, implantes dentales temuco, urgencias dentales",
+  title: "Be Smile Clínica Dental | Dentista en Temuco, Chile",
+  description: "Be Smile Clínica Dental en Temuco. Odontología general, limpieza dental, blanqueamiento, ortodoncia y fluoración. Pierde el miedo y agenda tu diagnóstico.",
+  keywords: "dentista temuco, clínica dental temuco, ortodoncia temuco, blanqueamiento dental temuco, limpieza dental temuco, be smile temuco",
   openGraph: {
-    title: "Clínica Dental Pro | Tu sonrisa perfecta en Temuco",
-    description: "Atención dental integral con especialistas de primer nivel. Tecnología 3D, tratamientos sin dolor y facilidades de pago.",
+    title: "Be Smile Clínica Dental | Tu sonrisa perfecta en Temuco",
+    description: "Atención dental de calidad en Temuco. Odontología general, blanqueamiento, ortodoncia y más. Pierde el miedo, agenda tu diagnóstico.",
     type: "website",
     locale: "es_CL",
   },

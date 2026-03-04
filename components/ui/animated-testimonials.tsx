@@ -126,7 +126,7 @@ export const AnimatedTestimonials = ({
                         <h3 className="text-2xl font-bold text-slate-800">
                             {testimonials[active].name}
                         </h3>
-                        <p className="text-sm text-blue-600 font-medium">
+                        <p className="text-sm text-pink-600 font-medium">
                             {testimonials[active].designation}
                         </p>
                         <motion.p className="text-base md:text-lg text-slate-700 mt-6 leading-relaxed">

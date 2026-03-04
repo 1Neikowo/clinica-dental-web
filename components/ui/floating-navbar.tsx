@@ -67,7 +67,7 @@ export const FloatingNav = ({
                         key={`link=${idx}`}
                         href={navItem.link}
                         className={cn(
-                            "relative dark:text-neutral-50 items-center flex space-x-1 text-slate-800 dark:hover:text-neutral-300 hover:text-blue-500 font-medium transition-colors"
+                            "relative dark:text-neutral-50 items-center flex space-x-1 text-slate-800 dark:hover:text-neutral-300 hover:text-pink-500 font-medium transition-colors"
                         )}
                     >
                         <span className="block sm:hidden">{navItem.icon}</span>
@@ -75,10 +75,10 @@ export const FloatingNav = ({
                     </Link>
                 ))}
                 <a
-                    href="https://wa.me/56912345678"
+                    href="https://wa.me/56982623887"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="bg-blue-600 text-white text-sm font-medium relative px-4 py-2 rounded-full hover:bg-blue-700 transition"
+                    className="bg-pink-600 text-white text-sm font-medium relative px-4 py-2 rounded-full hover:bg-pink-700 transition"
                 >
                     Agendar
                 </a>

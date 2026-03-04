@@ -62,7 +62,7 @@ const BentoCard = ({
             >
                 <div className="absolute inset-0 z-0">{background}</div>
                 <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 pt-10 transition-all duration-300 group-hover:-translate-y-10">
-                    <Icon className="h-12 w-12 origin-left transform-gpu text-blue-600 transition-all duration-300 ease-in-out group-hover:scale-75" />
+                    <Icon className="h-12 w-12 origin-left transform-gpu text-pink-600 transition-all duration-300 ease-in-out group-hover:scale-75" />
                     <h3 className="text-xl font-semibold text-slate-800 dark:text-neutral-300">
                         {name}
                     </h3>
@@ -75,7 +75,7 @@ const BentoCard = ({
                         "translate-y-0 opacity-100 md:translate-y-10 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100",
                     )}
                 >
-                    <button className="pointer-events-auto inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 hover:bg-blue-50 px-3 py-1.5 rounded-lg transition-colors animate-pulse md:animate-none">
+                    <button className="pointer-events-auto inline-flex items-center gap-2 text-sm font-semibold text-pink-600 hover:text-pink-700 hover:bg-pink-50 px-3 py-1.5 rounded-lg transition-colors animate-pulse md:animate-none">
                         {cta}
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                     </button>
@@ -102,14 +102,14 @@ const BentoCard = ({
                             onClick={(e) => e.stopPropagation()}
                         >
                             {/* Header */}
-                            <div className="relative p-6 pb-4 bg-gradient-to-br from-blue-50 to-white">
+                            <div className="relative p-6 pb-4 bg-gradient-to-br from-pink-50 to-white">
                                 <button
                                     onClick={() => setIsExpanded(false)}
                                     className="absolute top-4 right-4 h-8 w-8 rounded-full bg-slate-100 flex items-center justify-center hover:bg-slate-200 transition-colors"
                                 >
                                     <X className="h-4 w-4 text-slate-600" />
                                 </button>
-                                <Icon className="h-10 w-10 text-blue-600 mb-3" />
+                                <Icon className="h-10 w-10 text-pink-600 mb-3" />
                                 <h3 className="text-2xl font-bold text-slate-800">{name}</h3>
                                 <p className="text-slate-500 mt-1">{description}</p>
                             </div>
@@ -126,7 +126,7 @@ const BentoCard = ({
                                             transition={{ delay: 0.1 * i }}
                                             className="flex items-start gap-3"
                                         >
-                                            <span className="mt-1.5 h-2 w-2 rounded-full bg-blue-500 shrink-0" />
+                                            <span className="mt-1.5 h-2 w-2 rounded-full bg-pink-500 shrink-0" />
                                             <span className="text-slate-700 text-sm leading-relaxed">{detail}</span>
                                         </motion.li>
                                     ))}
@@ -137,7 +137,7 @@ const BentoCard = ({
                             {whatsappMessage && (
                                 <div className="p-6 pt-2">
                                     <a
-                                        href={`https://wa.me/56912345678?text=${encodeURIComponent(whatsappMessage)}`}
+                                        href={`https://wa.me/56982623887?text=${encodeURIComponent(whatsappMessage)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3.5 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"

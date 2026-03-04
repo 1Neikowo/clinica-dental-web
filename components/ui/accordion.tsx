@@ -23,7 +23,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                 >
-                    <ChevronDown className="w-6 h-6 text-blue-600" />
+                    <ChevronDown className="w-6 h-6 text-pink-600" />
                 </motion.div>
             </button>
             <AnimatePresence>

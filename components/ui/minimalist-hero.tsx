@@ -27,14 +27,14 @@ interface MinimalistHeroProps {
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
     <Link
         href={href}
-        className="text-sm font-semibold tracking-widest text-slate-500 transition-colors hover:text-blue-600 uppercase"
+        className="text-sm font-semibold tracking-widest text-slate-500 transition-colors hover:text-pink-600 uppercase"
     >
         {children}
     </Link>
 );
 
 const SocialIcon = ({ href, icon: Icon }: { href: string; icon: LucideIcon }) => (
-    <a href={href} target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-blue-600">
+    <a href={href} target="_blank" rel="noopener noreferrer" className="text-slate-400 transition-colors hover:text-pink-600">
         <Icon className="h-5 w-5" />
     </a>
 );
@@ -51,7 +51,7 @@ export const MinimalistHero = ({
     socialLinks,
     locationText,
     className,
-    circleClassName = "bg-blue-100",
+    circleClassName = "bg-pink-100",
 }: MinimalistHeroProps) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -137,7 +137,7 @@ export const MinimalistHero = ({
                                     key={link.label}
                                     href={link.href}
                                     onClick={() => setIsMenuOpen(false)}
-                                    className="text-2xl font-bold tracking-widest text-slate-800 hover:text-blue-600 uppercase transition-colors"
+                                    className="text-2xl font-bold tracking-widest text-slate-800 hover:text-pink-600 uppercase transition-colors"
                                 >
                                     {link.label}
                                 </Link>
@@ -167,7 +167,7 @@ export const MinimalistHero = ({
                         href={readMoreLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+                        className="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-semibold text-white bg-pink-600 rounded-full hover:bg-pink-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
                     >
                         {readMoreText}
                     </a>
@@ -206,7 +206,7 @@ export const MinimalistHero = ({
                     <h1 className="text-5xl sm:text-6xl font-extrabold text-slate-800 md:text-7xl lg:text-8xl tracking-tighter leading-[0.9]">
                         {overlayText.part1}
                         <br />
-                        <span className="text-blue-600">{overlayText.part2}</span>
+                        <span className="text-pink-600">{overlayText.part2}</span>
                     </h1>
                 </motion.div>
             </div>
