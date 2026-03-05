@@ -167,7 +167,7 @@ export default function HomeLayout() {
         <MinimalistHero
           logoText={
             <>
-              <Sparkles className="h-8 w-8 text-blue-600" />
+              <img src="/logo.png" alt="Logo Clínica Dental Pro" className="h-10 w-auto" />
               <span className="text-slate-900">Clínica Dental Pro</span>
             </>
           }
@@ -175,7 +175,7 @@ export default function HomeLayout() {
           mainText="Atención dental con especialistas de primer nivel. Recupera tu confianza con nuestra tecnología de punta."
           readMoreLink="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20evaluaci%C3%B3n"
           readMoreText="Agendar Evaluación"
-          imageSrc="/hero.png"
+          imageSrc="/hero.webp"
           imageAlt="Doctora clínica dental"
           overlayText={{
             part1: 'sonrisa',
@@ -507,7 +507,7 @@ export default function HomeLayout() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-2xl font-bold text-white flex items-center gap-2 mb-4">
-              <Sparkles className="h-6 w-6 text-blue-500" />
+              <img src="/logo.png" alt="Logo Clínica Dental Pro" className="h-8 w-auto" />
               Clínica Dental Pro
             </h3>
             <p className="text-sm text-slate-400">
