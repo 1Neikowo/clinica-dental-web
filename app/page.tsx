@@ -167,12 +167,12 @@ export default function HomeLayout() {
         <MinimalistHero
           logoText={
             <>
-              <img src="/logo.png" alt="Logo Clínica Dental Pro" className="h-10 w-auto" />
-              <span className="text-slate-900">Clínica Dental Pro</span>
+              <img src="/logo.png" alt="Logo Clínica Dental" className="h-12 w-auto" />
+              <span className="text-slate-900 font-extrabold uppercase tracking-widest text-lg" style={{ fontFamily: 'var(--font-outfit)' }}>Clínica Dental</span>
             </>
           }
           navLinks={navItems.map(item => ({ label: item.name, href: item.link }))}
-          mainText="Atención dental con especialistas de primer nivel. Recupera tu confianza con nuestra tecnología de punta."
+          mainText="Atención dental de calidad. Pierde el miedo y recupera tu sonrisa con nosotros."
           readMoreLink="https://wa.me/56912345678?text=Hola,%20me%20gustar%C3%ADa%20agendar%20una%20evaluaci%C3%B3n"
           readMoreText="Agendar Evaluación"
           imageSrc="/hero.webp"
@@ -507,8 +507,8 @@ export default function HomeLayout() {
           {/* Brand */}
           <div className="col-span-1 md:col-span-1">
             <h3 className="text-2xl font-bold text-white flex items-center gap-2 mb-4">
-              <img src="/logo.png" alt="Logo Clínica Dental Pro" className="h-8 w-auto" />
-              Clínica Dental Pro
+              <img src="/logo.png" alt="Logo Clínica Dental" className="h-12 w-auto" />
+              <span className="font-extrabold uppercase tracking-widest" style={{ fontFamily: 'var(--font-outfit)' }}>Clínica Dental</span>
             </h3>
             <p className="text-sm text-slate-400">
               Tu sonrisa en las mejores manos. Brindamos servicios dentales de alta calidad con tecnología de punta y calidez humana.
@@ -590,10 +590,10 @@ export default function HomeLayout() {
               allowFullScreen
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Ubicación Clínica Dental Pro"
+              title="Ubicación Clínica Dental"
             />
           </div>
-          <p className="text-center text-sm text-slate-500">&copy; {new Date().getFullYear()} Clínica Dental Pro. Todos los derechos reservados.</p>
+          <p className="text-center text-sm text-slate-500">&copy; {new Date().getFullYear()} Clínica Dental. Todos los derechos reservados.</p>
         </div>
       </footer>
 
