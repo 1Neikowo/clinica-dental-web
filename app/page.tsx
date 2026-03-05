@@ -182,8 +182,8 @@ export default function HomeLayout() {
             part2: 'perfecta.',
           }}
           socialLinks={[
-            { icon: Instagram, href: 'https://www.instagram.com/clinicadentalpro' },
-            { icon: Facebook, href: 'https://www.facebook.com/clinicadentalpro' },
+            { icon: Instagram, href: 'https://www.instagram.com/' },
+            { icon: Facebook, href: 'https://www.facebook.com/' },
           ]}
           locationText="Temuco, Chile"
           circleClassName="bg-blue-100/60"
