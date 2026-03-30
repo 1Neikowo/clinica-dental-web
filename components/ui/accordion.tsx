@@ -9,9 +9,10 @@ interface FAQItemProps {
     answer: string;
     isOpen: boolean;
     onClick: () => void;
+    accentColor?: string;
 }
 
-const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
+const FAQItem = ({ question, answer, isOpen, onClick, accentColor = "text-blue-600" }: FAQItemProps) => {
     return (
         <div className="border border-slate-200 rounded-xl overflow-hidden mb-4 bg-white/50 hover:bg-white transition-colors">
             <button
@@ -23,7 +24,7 @@ const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
                     animate={{ rotate: isOpen ? 180 : 0 }}
                     transition={{ duration: 0.3 }}
                 >
-                    <ChevronDown className="w-6 h-6 text-blue-600" />
+                    <ChevronDown className={`w-6 h-6 ${accentColor}`} />
                 </motion.div>
             </button>
             <AnimatePresence>
@@ -47,8 +48,10 @@ const FAQItem = ({ question, answer, isOpen, onClick }: FAQItemProps) => {
 
 export const FAQAccordion = ({
     faqs,
+    accentColor,
 }: {
     faqs: { question: string; answer: string }[];
+    accentColor?: string;
 }) => {
     const [openIndex, setOpenIndex] = useState<number | null>(null);
 
@@ -65,6 +68,7 @@ export const FAQAccordion = ({
                     answer={faq.answer}
                     isOpen={openIndex === index}
                     onClick={() => handleClick(index)}
+                    accentColor={accentColor}
                 />
             ))}
         </div>

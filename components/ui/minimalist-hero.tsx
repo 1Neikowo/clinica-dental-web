@@ -22,12 +22,15 @@ interface MinimalistHeroProps {
     locationText: string;
     className?: string;
     circleClassName?: string;
+    accentColorClass?: string;
+    accentHoverClass?: string;
+    accentTextClass?: string;
 }
 
 const NavLink = ({ href, children }: { href: string; children: React.ReactNode }) => (
     <Link
         href={href}
-        className="text-sm font-semibold tracking-widest text-slate-500 transition-colors hover:text-blue-600 uppercase"
+        className={cn("text-sm font-semibold tracking-widest text-slate-500 transition-colors uppercase", "hover:text-blue-600")}
     >
         {children}
     </Link>
@@ -52,6 +55,9 @@ export const MinimalistHero = ({
     locationText,
     className,
     circleClassName = "bg-blue-100",
+    accentColorClass = "bg-blue-600",
+    accentHoverClass = "hover:bg-blue-700",
+    accentTextClass = "text-blue-600",
 }: MinimalistHeroProps) => {
     const [isScrolled, setIsScrolled] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -167,7 +173,7 @@ export const MinimalistHero = ({
                         href={readMoreLink}
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-semibold text-white bg-blue-600 rounded-full hover:bg-blue-700 transition-all shadow-lg hover:shadow-xl hover:-translate-y-1"
+                        className={cn("inline-flex items-center justify-center px-6 py-3 md:px-8 md:py-4 text-sm md:text-base font-semibold text-white rounded-full transition-all shadow-lg hover:shadow-xl hover:-translate-y-1", accentColorClass, accentHoverClass)}
                     >
                         {readMoreText}
                     </a>
@@ -206,7 +212,7 @@ export const MinimalistHero = ({
                     <h1 className="text-5xl sm:text-6xl font-extrabold text-slate-800 md:text-7xl lg:text-8xl tracking-tighter leading-[0.9]">
                         {overlayText.part1}
                         <br />
-                        <span className="text-blue-600">{overlayText.part2}</span>
+                        <span className={accentTextClass}>{overlayText.part2}</span>
                     </h1>
                 </motion.div>
             </div>

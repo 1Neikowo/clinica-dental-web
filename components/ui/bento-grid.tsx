@@ -35,6 +35,8 @@ const BentoCard = ({
     cta,
     details,
     whatsappMessage,
+    phoneNumber = "56912345678",
+    accentTextColor = "text-blue-600",
 }: {
     name: string;
     className: string;
@@ -45,6 +47,8 @@ const BentoCard = ({
     cta: string;
     details?: string[];
     whatsappMessage?: string;
+    phoneNumber?: string;
+    accentTextColor?: string;
 }) => {
     const [isExpanded, setIsExpanded] = useState(false);
 
@@ -62,7 +66,7 @@ const BentoCard = ({
             >
                 <div className="absolute inset-0 z-0">{background}</div>
                 <div className="pointer-events-none z-10 flex transform-gpu flex-col gap-1 p-6 pt-10 transition-all duration-300 group-hover:-translate-y-10">
-                    <Icon className="h-12 w-12 origin-left transform-gpu text-blue-600 transition-all duration-300 ease-in-out group-hover:scale-75" />
+                    <Icon className={`h-12 w-12 origin-left transform-gpu ${accentTextColor} transition-all duration-300 ease-in-out group-hover:scale-75`} />
                     <h3 className="text-xl font-semibold text-slate-800 dark:text-neutral-300">
                         {name}
                     </h3>
@@ -75,7 +79,7 @@ const BentoCard = ({
                         "translate-y-0 opacity-100 md:translate-y-10 md:opacity-0 md:group-hover:translate-y-0 md:group-hover:opacity-100",
                     )}
                 >
-                    <button className="pointer-events-auto inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700 hover:bg-blue-50 px-3 py-1.5 rounded-lg transition-colors animate-pulse md:animate-none">
+                    <button className={`pointer-events-auto inline-flex items-center gap-2 text-sm font-semibold ${accentTextColor} hover:opacity-80 hover:bg-slate-50 px-3 py-1.5 rounded-lg transition-colors animate-pulse md:animate-none`}>
                         {cta}
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
                     </button>
@@ -137,7 +141,7 @@ const BentoCard = ({
                             {whatsappMessage && (
                                 <div className="p-6 pt-2">
                                     <a
-                                        href={`https://wa.me/56912345678?text=${encodeURIComponent(whatsappMessage)}`}
+                                        href={`https://wa.me/${phoneNumber}?text=${encodeURIComponent(whatsappMessage)}`}
                                         target="_blank"
                                         rel="noopener noreferrer"
                                         className="w-full inline-flex items-center justify-center gap-2 bg-green-500 hover:bg-green-600 text-white font-semibold py-3.5 rounded-xl transition-all shadow-lg hover:shadow-xl hover:-translate-y-0.5"
