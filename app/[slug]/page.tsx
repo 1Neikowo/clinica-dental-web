@@ -6,6 +6,7 @@ import { MinimalistHero } from "@/components/ui/minimalist-hero";
 import { BentoGrid, BentoCard } from "@/components/ui/bento-grid";
 import { AnimatedTestimonials } from "@/components/ui/animated-testimonials";
 import { FAQAccordion } from "@/components/ui/accordion";
+import { CompareSlider } from "@/components/ui/compare-slider";
 import { Home, Stethoscope, MessageSquare, Phone, Instagram, Facebook, Sparkles, User, BriefcaseMedical, ShieldCheck, Clock, CreditCard, HeartPulse, Star, Quote } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
@@ -308,54 +309,30 @@ export default function ClinicaPage() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-100">
-              <div className="grid grid-cols-2 h-40 sm:h-56">
-                <div className="relative bg-slate-200">
-                  <img src="https://images.unsplash.com/photo-1606811841689-23dfddce3e95?q=80&w=800&auto=format&fit=crop" alt="Antes - Blanqueamiento" className="w-full h-full object-cover" />
-                  <span className="absolute bottom-2 left-2 bg-slate-900/70 text-white text-xs px-2 py-1 rounded">Antes</span>
-                </div>
-                <div className="relative bg-slate-100">
-                  <img src="https://images.unsplash.com/photo-1609840114035-3c981b782dfe?q=80&w=800&auto=format&fit=crop" alt="Después - Blanqueamiento" className="w-full h-full object-cover" />
-                  <span className={`absolute bottom-2 left-2 ${colors.bg}/90 text-white text-xs px-2 py-1 rounded`}>Después</span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="font-bold text-slate-800 text-lg">Blanqueamiento LED</h3>
-                <p className="text-slate-600 text-sm mt-1">Resultados visibles en solo 1 sesión. Hasta 8 tonos más blanco.</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-100">
-              <div className="grid grid-cols-2 h-40 sm:h-56">
-                <div className="relative bg-slate-200">
-                  <img src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?q=80&w=800&auto=format&fit=crop" alt="Antes - Carillas" className="w-full h-full object-cover" />
-                  <span className="absolute bottom-2 left-2 bg-slate-900/70 text-white text-xs px-2 py-1 rounded">Antes</span>
-                </div>
-                <div className="relative bg-slate-100">
-                  <img src="https://images.unsplash.com/photo-1606265752439-1f18756aa5fc?q=80&w=800&auto=format&fit=crop" alt="Después - Carillas" className="w-full h-full object-cover" />
-                  <span className={`absolute bottom-2 left-2 ${colors.bg}/90 text-white text-xs px-2 py-1 rounded`}>Después</span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="font-bold text-slate-800 text-lg">Carillas de Porcelana</h3>
-                <p className="text-slate-600 text-sm mt-1">Transformación completa de la sonrisa con carillas ultrafinas.</p>
-              </div>
-            </div>
-            <div className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 border border-slate-100">
-              <div className="grid grid-cols-2 h-40 sm:h-56">
-                <div className="relative bg-slate-200">
-                  <img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?q=80&w=800&auto=format&fit=crop" alt="Antes - Ortodoncia" className="w-full h-full object-cover" />
-                  <span className="absolute bottom-2 left-2 bg-slate-900/70 text-white text-xs px-2 py-1 rounded">Antes</span>
-                </div>
-                <div className="relative bg-slate-100">
-                  <img src="https://images.unsplash.com/photo-1598256989800-fe5f95da9787?q=80&w=800&auto=format&fit=crop" alt="Después - Ortodoncia" className="w-full h-full object-cover" />
-                  <span className={`absolute bottom-2 left-2 ${colors.bg}/90 text-white text-xs px-2 py-1 rounded`}>Después</span>
-                </div>
-              </div>
-              <div className="p-6">
-                <h3 className="font-bold text-slate-800 text-lg">Ortodoncia Invisible</h3>
-                <p className="text-slate-600 text-sm mt-1">Alineación perfecta sin brackets visibles en 12 meses.</p>
-              </div>
-            </div>
+            <CompareSlider
+              beforeImage="/blanqueamiento1.png"
+              afterImage="/blanqueamiento2.png"
+              title="Blanqueamiento LED"
+              description="Resultados visibles en solo 1 sesión. Hasta 8 tonos más blanco."
+              colorClass={colors.text}
+              isExternalImage={false}
+            />
+            <CompareSlider
+              beforeImage="/carilla1.png"
+              afterImage="/carilla2.png"
+              title="Carillas de Porcelana"
+              description="Transformación completa de la sonrisa con carillas ultrafinas."
+              colorClass={colors.text}
+              isExternalImage={false}
+            />
+            <CompareSlider
+              beforeImage="/ortodoncia1.png"
+              afterImage="/ortodoncia2.png"
+              title="Ortodoncia Invisible"
+              description="Alineación perfecta sin brackets visibles en 12 meses."
+              colorClass={colors.text}
+              isExternalImage={false}
+            />
           </div>
         </div>
       </motion.section>
